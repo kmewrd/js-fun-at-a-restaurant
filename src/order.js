@@ -29,11 +29,7 @@ function searchOrder(orderTypeList, item) {
   for (var i = 0; i < orderTypeList.length; i++) {
     allItems.push(orderTypeList[i].item);
   }
-  if (allItems.includes(item)) {
-    return true;
-  } else {
-    return false;
-  }
+  return allItems.includes(item);
 }
 
 module.exports = {
