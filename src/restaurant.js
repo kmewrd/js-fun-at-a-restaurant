@@ -10,22 +10,9 @@ function createRestaurant(restaurantName) {
 }
 
 function addMenuItem(restaurantName, menuItem) {
-  if (restaurantName.menus.breakfast.includes(menuItem)) {
-    
-  } else if (restaurantName.menus.lunch.includes(menuItem)) {
-
-  } else if (restaurantName.menus.dinner.includes(menuItem)) {
-
-  } else {
-    if (menuItem.type === "breakfast") {
-      return restaurantName.menus.breakfast.push(menuItem);
-    } else if (menuItem.type === "lunch") {
-      return restaurantName.menus.lunch.push(menuItem);
-    } else if (menuItem.type === "dinner") {
-      return restaurantName.menus.dinner.push(menuItem);
-    } else {
-
-    }
+  var list = restaurantName.menus[menuItem.type];
+  if (list.includes(menuItem) === false) {
+    restaurantName.menus[menuItem.type].push(menuItem);
   }
 }
 
