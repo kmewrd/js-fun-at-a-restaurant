@@ -1,8 +1,6 @@
 function takeOrder(order, orderTypeList) {
-  if (orderTypeList.length === 3) {
-
-  } else {
-    return orderTypeList.push(order);
+  if (orderTypeList.length < 3) {
+    return orderTypeList.push(order)
   }
 }
 
@@ -10,8 +8,6 @@ function refundOrder(orderNumber, orderTypeList) {
   for (var i = 0; i < orderTypeList.length; i++) {
     if (orderTypeList[i].orderNumber === orderNumber) {
       orderTypeList.splice(i, 1);
-    } else {
-
     }
   }
 }
